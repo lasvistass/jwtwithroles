@@ -1,0 +1,11 @@
+SELECT * FROM `role` r 
+INSERT INTO `role` (id, description, name)
+VALUES (2, 'USER', 'USER')
+
+SELECT * FROM `user` u 
+INSERT INTO `user` (id, email, name, password, phone, username)
+VALUES (2, 'xxx@hotmail.it', 'Marco', '1234', '3200000000','pizzopazzo')
+
+SELECT * FROM user_roles ur 
+INSERT INTO user_roles (user_id, role_id)
+VALUES (3,2)
