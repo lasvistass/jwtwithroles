@@ -75,4 +75,25 @@ public class UserServiceImpl implements UserDetailsService, UserService {
         nUser.setRoles(roleSet);
         return userDao.save(nUser);
     }
+
+	@Override
+	public User findById(Long id) {
+		return userDao.findById(id).get();
+	}
+
+	@Override
+	public void setAdminToUser(Long id) {
+		User user = userDao.findById(id).get();
+		Role role = roleService.findByName("ADMIN");
+		user.getRoles().add(role);
+		userDao.save(user);
+	}
+
+	@Override
+	public void removeAdmin(Long id) {
+		User user = userDao.findById(id).get();
+		Role role = roleService.findByName("ADMIN");
+		user.getRoles().remove(role);
+
+	}
 }

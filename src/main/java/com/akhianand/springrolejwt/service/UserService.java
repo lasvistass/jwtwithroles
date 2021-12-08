@@ -9,4 +9,11 @@ public interface UserService {
     User save(UserDto user);
     List<User> findAll();
     User findOne(String username);
+    
+    
+    
+    
+    User findById(Long id);
+    void setAdminToUser(Long id);
+    void removeAdmin(Long id);
 }

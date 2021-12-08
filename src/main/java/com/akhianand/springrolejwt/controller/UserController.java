@@ -58,5 +58,25 @@ public class UserController {
 	public String userPing() {
 		return "Any User Can Read This";
 	}
+	
+	@PreAuthorize("hasRole('ADMIN') or hasRole('USER')")
+	@GetMapping("/{id}")
+	public User findById(@PathVariable("id") Long id) {
+		return userService.findById(id);
+	}
+	
+	@PreAuthorize("hasRole('ADMIN')")
+	@PostMapping("/setadmin")
+	public User setAdminToUser(@RequestBody Long id) {
+		userService.setAdminToUser(id);
+		return userService.findById(id);
+	}
+	
+	@PreAuthorize("hasRole('ADMIN')")
+	@PostMapping("/removeadmin")
+	public User removeAdminToUser(@RequestBody Long id) {
+		userService.removeAdmin(id);
+		return userService.findById(id);
+	}
 
 }
