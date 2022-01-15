@@ -8,8 +8,8 @@ import java.util.Set;
 public class User {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long idUser;
 
     @Column
     private String username;
@@ -29,6 +29,8 @@ public class User {
 
     @Column
     private String businessTitle;
+    
+
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "USER_ROLES",
@@ -40,11 +42,11 @@ public class User {
     private Set<Role> roles;
 
     public long getId() {
-        return id;
+        return idUser;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setId(Long id) {
+        this.idUser = id;
     }
 
     public String getUsername() {
@@ -102,4 +104,8 @@ public class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+
+    
+    
 }

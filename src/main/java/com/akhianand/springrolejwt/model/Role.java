@@ -7,7 +7,7 @@ public class Role {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long id;
+    private Long idRole;
 
     @Column
     private String name;
@@ -16,11 +16,11 @@ public class Role {
     private String description;
 
     public long getId() {
-        return id;
+        return idRole;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setId(Long id) {
+        this.idRole = id;
     }
 
     public String getName() {

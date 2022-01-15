@@ -1,0 +1,26 @@
+Host
+bsjyqrxvyhdivumdm3sf-mysql.services.clever-cloud.com
+Database Name
+bsjyqrxvyhdivumdm3sf
+User
+ucq0jqtqowhnmp70
+Password
+VIpCVoe4fTcKdZDBCop5
+🔐
+Port
+3306
+Connection URI
+mysql://ucq0jqtqowhnmp70:VIpCVoe4fTcKdZDBCop5@bsjyqrxvyhdivumdm3sf-mysql.services.clever-cloud.com:3306/bsjyqrxvyhdivumdm3sf
+🔐
+
+waxifem886@tinydef.com
+
+Cascata00!
+
+{
+    "username":"babbala",
+    "password":"babbax",
+    "email": "xxx@uuu.it",
+    "phone": "320255555",
+    "name": "Paridie"
+}
